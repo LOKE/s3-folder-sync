@@ -33,6 +33,7 @@ function sync(args) {
   var s3SecretKey = argv.secret || process.env.AWS_SECRET_KEY;
   var s3Bucket    = argv.bucket || process.env.S3_BUCKET;
   var s3Region    = argv.region || process.env.S3_REGION;
+  var s3Prefix    = argv.prefix || process.env.S3_PREFIX;
 
   if (!s3Bucket    || !s3Region)    throw new Error('No bucket details supplied. Please set env S3_BUCKET & S3_REGION');
   if (!s3AccessKey || !s3SecretKey) throw new Error('No S3 credentials supplied. Please set env AWS_ACCESS_KEY & AWS_SECRET_KEY.');
@@ -45,6 +46,7 @@ function sync(args) {
     bucket      : s3Bucket,
     key         : s3AccessKey,
     secret      : s3SecretKey,
+    prefix      : s3Prefix,
     concurrency : 16
   }))
   .on('data', log);

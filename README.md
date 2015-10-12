@@ -20,15 +20,21 @@ This will require the S3 target details to be conigured as environment variables
 Alternatively you can specify the credentials as command line parameters:
 
 ```bash
-s3fsync --key={yourawskey} --secret={yourawssecret} --bucket={yourawsbucket} --
+s3fsync --key={yourawskey} --secret={yourawssecret} --bucket={yourawsbucket} --region={yourbucketregion}
+```
+
+If it needs to be synced with a subfolder in the bucket use the prefix argument that ends in a trailing `/`:
+
+```bash
+s3fsync --prefix=subfolder/ .
 ```
 
 ## Enironment Variables
 
 Instead of specifying via command line, you may specify the S3 target using the following environment variables:
 
-- AWS_ACCESS_KEY
-- AWS_SECRET_KEY
-- S3_BUCKET
-- S3_REGION
-
+- AWS_ACCESS_KEY --key
+- AWS_SECRET_KEY --secret
+- S3_BUCKET = --bucket
+- S3_REGION = --region
+- S3_PREFIX = --prefix
