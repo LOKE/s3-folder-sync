@@ -38,7 +38,7 @@ function sync(args) {
   if (!s3Bucket    || !s3Region)    throw new Error('No bucket details supplied. Please set env S3_BUCKET & S3_REGION');
   if (!s3AccessKey || !s3SecretKey) throw new Error('No S3 credentials supplied. Please set env AWS_ACCESS_KEY & AWS_SECRET_KEY.');
 
-  console.log('Syncing local folder \'' + localPath + '\' to bucket \'' + s3Bucket + '\'');
+  console.log('Syncing local folder \'' + localPath + '\' to bucket \'' + s3Bucket + '\' at region ' + s3Region);
 
   readdirp({root: localPath})
   .pipe(s3sync({

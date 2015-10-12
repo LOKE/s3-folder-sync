@@ -38,3 +38,7 @@ Instead of specifying via command line, you may specify the S3 target using the 
 - S3_BUCKET = --bucket
 - S3_REGION = --region
 - S3_PREFIX = --prefix
+
+## TODO
+
+More docs, commandline help, file and folder exclusion.
