@@ -8,7 +8,7 @@
   },
   "name": "s3fsync",
   "description": "Command line wrapper around s3-sync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "devDependencies": {},
   "bin": {
