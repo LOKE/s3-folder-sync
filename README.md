@@ -33,8 +33,8 @@ s3fsync --prefix=subfolder/ .
 
 Instead of specifying via command line, you may specify the S3 target using the following environment variables:
 
-- AWS_ACCESS_KEY --key
-- AWS_SECRET_KEY --secret
+- AWS_ACCESS_KEY = --key
+- AWS_SECRET_KEY = --secret
 - S3_BUCKET = --bucket
 - S3_REGION = --region
 - S3_PREFIX = --prefix
